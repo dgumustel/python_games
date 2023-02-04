@@ -1,6 +1,8 @@
 from tkinter import Button, Label
 import random
 import settings
+import ctypes
+import sys
 
 class Cell:
     all = []
@@ -50,6 +52,14 @@ class Cell:
                 for cell_object in self.surrounding_cells:
                     cell_object.show_cell()
             self.show_cell()
+            # When number of mines == cells count, game won
+            if Cell.cell_count == settings.MINES_COUNT:
+                ctypes.windll.user32.MessageBoxW(0, 
+               'Congratulations, you won!', 'Game Over', 0)
+
+        # Unbind left/right click events if cell is opened
+        self.cell_btn_object.unbind('<Button-1>')
+        self.cell_btn_object.unbind('<Button-3>')
 
     def get_cell_by_axis(self, x, y):
         # Return a cell object based on values of x and y
@@ -89,6 +99,9 @@ class Cell:
                 Cell.cell_count_label_object.configure(
                     text=f'Cells left: {Cell.cell_count}'
                 )
+            self.cell_btn_object.configure(
+                bg='SystemButtonFace'
+            )
             
         self.is_opened = True
 
@@ -96,6 +109,10 @@ class Cell:
         # TODO: Program game over
         # During development, just make mines red when clicked:
         self.cell_btn_object.configure(bg='red')
+        ctypes.windll.user32.MessageBoxW(0, 
+        'You clicked on a mine!', 'Game Over', 0)
+        sys.exit()
+
 
     def right_click_actions(self, event):
         if not self.is_mine_candidate:

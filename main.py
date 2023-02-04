@@ -21,6 +21,18 @@ top_frame = Frame(
 # Place this top sidebar using top left corner as anchor 
 top_frame.place(x=0, y=0)
 
+game_title = Label(
+    top_frame,
+    bg='black',
+    fg='white',
+    text='Minesweeper',
+    font=('', 48)
+)
+game_title.place(
+    x=utils.width_prct(25),
+    y=0
+)
+
 left_frame = Frame(
     root,
     bg='dark gray', # TODO: change
