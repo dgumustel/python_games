@@ -9,6 +9,7 @@ class Cell:
     def __init__(self, x, y, is_mine=False):
         self.is_mine = is_mine
         self.is_opened = False
+        self.is_mine_candidate = False
         self.cell_btn_object = None
         self.x = x
         self.y = y
@@ -24,7 +25,7 @@ class Cell:
         )
 
         btn.bind('<Button-1>', self.left_click_actions)
-        btn.bind('<Button-3>', self.right_click_actions)
+        btn.bind('<Button-3>', self.right_click_actions) # May need to be <Button-2> or <Button-4> depending on system
         self.cell_btn_object = btn
 
     @staticmethod # Use case of Class, not instance
@@ -97,8 +98,16 @@ class Cell:
         self.cell_btn_object.configure(bg='red')
 
     def right_click_actions(self, event):
-        print(event)
-        print('I am right clicked!')
+        if not self.is_mine_candidate:
+            self.cell_btn_object.configure(
+                bg='orange'
+            )
+            self.is_mine_candidate = True
+        else:
+            self.cell_btn_object.configure(
+                bg='SystemButtonFace' # Return to default
+            )
+            self.is_mine_candidate = False
 
     @staticmethod
     def randomize_mines():
