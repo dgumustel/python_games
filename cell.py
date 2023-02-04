@@ -22,8 +22,8 @@ class Cell:
     def create_btn_object(self, location):
         btn = Button(
             location,
-            width=8,
-            height=4
+            width=4,
+            height=2
         )
 
         btn.bind('<Button-1>', self.left_click_actions)
@@ -136,5 +136,4 @@ class Cell:
 
     def __repr__(self):
         return f'Cell({self.x}, {self.y})'
-    
     
