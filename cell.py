@@ -28,6 +28,40 @@ class Cell:
     def left_click_actions(self, event):
         if self.is_mine:
             self.show_mine()
+        else:
+            self.show_cell()
+
+    def get_cell_by_axis(self, x, y):
+        # Return a cell object based on values of x and y
+        for cell in Cell.all:
+            if cell.x == x and cell.y == y:
+                return cell
+
+    @property
+    def surrounding_cells(self):
+        cells = [
+            self.get_cell_by_axis(self.x-1, self.y-1),
+            self.get_cell_by_axis(self.x-1, self.y),
+            self.get_cell_by_axis(self.x-1, self.y+1),
+            self.get_cell_by_axis(self.x, self.y-1),
+            self.get_cell_by_axis(self.x, self.y+1),
+            self.get_cell_by_axis(self.x+1, self.y-1),
+            self.get_cell_by_axis(self.x+1, self.y),
+            self.get_cell_by_axis(self.x+1, self.y+1)
+        ]
+        cells = [cell for cell in cells if cell is not None]
+        return cells
+
+    @property
+    def surrounded_cells_mines_length(self):
+        counter = 0
+        for cell in self.surrounding_cells:
+            if cell.is_mine:
+                counter += 1
+        return counter
+
+    def show_cell(self):
+        self.cell_btn_object.configure(text=self.surrounded_cells_mines_length)
 
     def show_mine(self):
         # TODO: Program game over
