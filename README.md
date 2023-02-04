@@ -17,6 +17,7 @@ This game is currently functional, but not pretty! Below is a list of ideas, in 
 - Ensure that every starting click is a safe click (requires board generation on first click rather than on start-up) 
 - Ensure that games are solvable without guessing (this will be a challenge, see resources) 
 - Reveal mines on game over (win or lose) including places where player incorrectly flagged mines
+- Troubleshoot tkinter display failures on MacOS
 
 Resources:
 - Free code camp tutorial: [https://www.youtube.com/watch?v=OqbGRZx4xUc](https://www.youtube.com/watch?v=OqbGRZx4xUc)
