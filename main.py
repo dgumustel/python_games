@@ -50,6 +50,9 @@ for x in range(settings.GRID_WIDTH):
 
 Cell.randomize_mines()
 
+for c in Cell.all:
+    print(c.is_mine)
+
 # Run window
 root.mainloop()
 
