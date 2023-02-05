@@ -1,6 +1,6 @@
 # Minesweeper in Python
 
-This game is currently functional, but not pretty! 
+This game is currently functional, but not pretty! After a bit of looking around, it may be worth it to swap from using tkinter to using pygame. 
 
 Bugs: 
 - Still able to right-click and flag opened cells that are touching mines or touching the edge of the board
@@ -28,3 +28,5 @@ Below is a list of additional features, in no particular order, that I'd like to
 Resources:
 - Free code camp tutorial: [https://www.youtube.com/watch?v=OqbGRZx4xUc](https://www.youtube.com/watch?v=OqbGRZx4xUc)
 - Inspiration: [https://github.com/franciscod/puzzles/blob/master/mines.c](https://github.com/franciscod/puzzles/blob/master/mines.c)
+- Minesweeper in Pygame 1: [https://github.com/vdallco/Minesweeper](https://github.com/vdallco/Minesweeper)
+- Minesweeper in Pygame 2 (runs smoother than the first): [https://github.com/Harrelix/Minesweeper](https://github.com/Harrelix/Minesweeper)
