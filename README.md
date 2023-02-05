@@ -1,7 +1,11 @@
 # Minesweeper in Python
 
-This game is currently functional, but not pretty! Below is a list of ideas, in no particular order, that I'd like to incorporate:
+This game is currently functional, but not pretty! 
 
+Bugs: 
+- Still able to right-click and flag opened cells that are touching mines or touching the edge of the board
+
+Below is a list of additional features, in no particular order, that I'd like to incorporate:
 - Settings for different game difficulties currently exist in settings.py but are not utilized
 - The GUI is not satisfactory 
 - There's no way to actually flag mines, and no count of flagged mines 
@@ -15,9 +19,11 @@ This game is currently functional, but not pretty! Below is a list of ideas, in 
 - Have I mentioned that the GUI is bad? Please fix the GUI
 - Add the little smiley face that goes :O when you click on a cell
 - Ensure that every starting click is a safe click (requires board generation on first click rather than on start-up) 
-- Ensure that games are solvable without guessing (this will be a challenge, see resources) 
+- Ensure that games are solvable without guessing (this will be a challenge because it requires programming a board solver, see resources) 
 - Reveal mines on game over (win or lose) including places where player incorrectly flagged mines
 - Troubleshoot tkinter display failures on MacOS
+- When clicking on a cell whose number is equal to the number of neighboring flags, reveal surrounding unflagged cells
+- Add buttons to restart board, start new game, or change settings
 
 Resources:
 - Free code camp tutorial: [https://www.youtube.com/watch?v=OqbGRZx4xUc](https://www.youtube.com/watch?v=OqbGRZx4xUc)
