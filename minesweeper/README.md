@@ -21,7 +21,7 @@ Below is a list of additional features, in no particular order, that I'd like to
 - Ensure that every starting click is a safe click (requires board generation on first click rather than on start-up) 
 - Ensure that games are solvable without guessing (this will be a challenge because it requires programming a board solver, see resources) 
 - Reveal mines on game over (win or lose) including places where player incorrectly flagged mines
-- Troubleshoot tkinter display failures on MacOS
+- Troubleshoot tkinter display failures on MacOS - might become an obsolete issue if I swap to using pygame
 - When clicking on a cell whose number is equal to the number of neighboring flags, reveal surrounding unflagged cells
 - Add buttons to restart board, start new game, or change settings
 
@@ -30,3 +30,5 @@ Resources:
 - Inspiration: [https://github.com/franciscod/puzzles/blob/master/mines.c](https://github.com/franciscod/puzzles/blob/master/mines.c)
 - Minesweeper in Pygame 1: [https://github.com/vdallco/Minesweeper](https://github.com/vdallco/Minesweeper)
 - Minesweeper in Pygame 2 (runs smoother than the first): [https://github.com/Harrelix/Minesweeper](https://github.com/Harrelix/Minesweeper)
+
+Note that this subdirectory was merged from another repository into the python_games repo following these instructions: https://gist.github.com/msrose/2feacb303035d11d2d05 
