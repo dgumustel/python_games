@@ -20,6 +20,7 @@ Below is a list of additional features, in no particular order, that I'd like to
 - Add the little smiley face that goes :O when you click on a cell
 - Ensure that every starting click is a safe click (requires board generation on first click rather than on start-up) 
 - Ensure that games are solvable without guessing (this will be a challenge because it requires programming a board solver, see resources) 
+  - Alternatively, if I can't generate guess-free boards, it would be really handy to have a button that calculated the % likelihood that each cell on the perimeter of an open space was a mine to help inform guesswork by the player. See more details on calculating these probabilities here: https://nothings.org/games/minesweeper/
 - Reveal mines on game over (win or lose) including places where player incorrectly flagged mines
 - Troubleshoot tkinter display failures on MacOS - might become an obsolete issue if I swap to using pygame
 - When clicking on a cell whose number is equal to the number of neighboring flags, reveal surrounding unflagged cells
