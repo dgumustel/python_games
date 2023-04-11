@@ -25,6 +25,7 @@ Below is a list of additional features, in no particular order, that I'd like to
 - Troubleshoot tkinter display failures on MacOS - might become an obsolete issue if I swap to using pygame
 - When clicking on a cell whose number is equal to the number of neighboring flags, reveal surrounding unflagged cells
 - Add buttons to restart board, start new game, or change settings
+- Add a button to automatically flag all unflagged mines that the player has uncovered so I don't have to manually click 95 mines when trying to figure out how many mines I have left in the last few squares 
 
 Resources:
 - Free code camp tutorial: [https://www.youtube.com/watch?v=OqbGRZx4xUc](https://www.youtube.com/watch?v=OqbGRZx4xUc)
